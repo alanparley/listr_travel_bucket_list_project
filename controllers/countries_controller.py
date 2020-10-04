@@ -6,7 +6,8 @@ import repositories.city_repository as city_repository
 
 countries_blueprint = Blueprint("countries", __name__)
 
-@countries_blueprint.route("/")
+@countries_blueprint.route("/countries/index.html")
 def countries():
     countries = country_repository.select_all()
-    return render_template("index.html", all_countries = countries)
+    cities = city_repository.select_all()
+    return render_template("countries/index.html", all_countries = countries, all_cities = cities)

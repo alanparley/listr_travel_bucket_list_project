@@ -1,24 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-This could show all in list
+THIS IS THE HOMEPAGE
 <hr>
 
-{% for country in all_countries %}
-
-<div>
-    <p>{{country.country_name}}</p>
 
 
-    <p>Visited?
-        {% if country.visited == True %}
-        Visited
-        {% else %}
-        Not Visited
-        {% endif %}
-    </p>
-    <p><a href="edit link">Edit</a></p>
-    <hr>
-</div>
-
-{% endfor %}
 {% endblock %}
