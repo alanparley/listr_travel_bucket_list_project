@@ -6,12 +6,12 @@ THIS SHOULD SHOW ALL CITIES
 {% for city in all_cities %}
 
 <div>
-    <p>{{city.city_name}}</p>
+    <p>{{city.city_name}} in {{city.country.country_name}}</p>
     <p>Visited?
         {% if city.visited == True %}
-        Visited
+        &#10004;
         {% else %}
-        Not Visited
+        &#10008;
         {% endif %}
 
     <p><a href="edit link">Edit</a></p>

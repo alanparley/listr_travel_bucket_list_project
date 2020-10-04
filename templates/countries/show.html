@@ -1,25 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-THIS SHOULD SHOW ALL COUNTRIES
-<hr>
-
-{% for country in all_countries %}
 
 <div>
     <p>{{country.country_name}}</p>
-
+    <hr>
     <p>Visited?
         {% if country.visited == True %}
-        &#10004;
+        VISITED
         {% else %}
-        &#10008;
+        NOT BEEN THERE YET
         {% endif %}
-
-    <p><a href="edit link">Edit</a></p>
-    <hr>
     </p>
+    <p><a href="/countries/{{country.id}}/edit">Edit</a></p>
 </div>
-{% endfor %}
-
 
 {% endblock %}
