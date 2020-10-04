@@ -20,22 +20,6 @@ THIS SHOULD SHOW ALL COUNTRIES
     </p>
 </div>
 {% endfor %}
-{% for city in all_cities %}
-
-<div>
-    <p>{{city.city_name}}</p>
-    <p>Visited?
-        {% if city.visited == True %}
-        Visited
-        {% else %}
-        Not Visited
-        {% endif %}
-
-    <p><a href="edit link">Edit</a></p>
-    <hr>
-    </p>
-    {% endfor %}
-</div>
 
 
 {% endblock %}
