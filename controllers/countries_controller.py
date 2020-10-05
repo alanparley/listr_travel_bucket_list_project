@@ -6,10 +6,11 @@ import repositories.city_repository as city_repository
 
 countries_blueprint = Blueprint("countries", __name__)
 
-@countries_blueprint.route("/countries/index.html")
+@countries_blueprint.route("/countries")
 def countries():
     countries = country_repository.select_all()
-    return render_template("countries/index.html", all_countries = countries)
+    cities = city_repository.select_all()
+    return render_template("countries/index.html", all_countries = countries, cities = cities)
 
 @countries_blueprint.route("/countries/new", methods=['GET'])
 def new_country():
@@ -23,7 +24,7 @@ def create_country():
     visited = request.form['visited']
     country = Country(country_name, visited)
     country_repository.save(country)
-    return redirect('/countries/index.html')
+    return redirect('/countries')
 
 @countries_blueprint.route("/countries/<id>", methods=['GET'])
 def show_country(id):

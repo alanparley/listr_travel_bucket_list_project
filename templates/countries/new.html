@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/countries" method="post">
+<form action="/countries" method="POST">
     <div>
         <label for="country">Country</label><span style="color: red !important; display: inline; float: none;">*</span>
 
@@ -262,6 +262,21 @@
             <option value="true">YES</option>
         </select>
     </div>
+
+    <!-- <form action="/cities" method="post">
+        <div>
+            <label for="city">City</label>
+            <input type="text" id="city_name" name="city_name" placeholder="city_name" required autofocus>
+        </div>
+
+
+        <div>
+            <label for="visited">Visited?</label>
+            <select id="visited" name="visited">
+                <option value="false">NOT YET</option>
+                <option value="true">YES</option>
+            </select>
+        </div> -->
 
     <button type="submit">Add Country</button>
 

@@ -26,7 +26,7 @@ def select_all():
 
 def select(id):
     country = None
-    sql = "SELECT * FROM countries where id = %s"
+    sql = "SELECT * FROM countries WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
 

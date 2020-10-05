@@ -7,7 +7,11 @@ THIS SHOULD SHOW ALL COUNTRIES
 
 <div>
     <p>{{country.country_name}}</p>
-
+    {% for city in  cities %}
+    {% if city.country.id == country.id%}
+    <p>{{ city.city_name }}</p>
+    {% endif %}
+    {% endfor %}
     <p>Visited?
         {% if country.visited == True %}
         &#10004;
@@ -15,11 +19,11 @@ THIS SHOULD SHOW ALL COUNTRIES
         &#10008;
         {% endif %}
 
+
     <p><a href="edit link">Edit</a></p>
     <hr>
     </p>
 </div>
 {% endfor %}
-
 
 {% endblock %}
