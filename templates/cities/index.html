@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-THIS SHOULD SHOW ALL CITIES
+<h1>Here are all the cities you'd love to visit...</h1>
 <hr>
 
 {% for city in all_cities %}
 
 <div>
-    <p>{{city.city_name}} in {{city.country.country_name}}</p>
+    <h2>{{city.city_name}}</h2>
+    <h3>in {{city.country.country_name}}</h3>
     <p>Visited?
         {% if city.visited == True %}
         &#10004;
@@ -14,7 +15,7 @@ THIS SHOULD SHOW ALL CITIES
         &#10008;
         {% endif %}
 
-    <p><a href="edit link">Edit</a></p>
+    <p><a href="/cities/{{city.id}}/edit">Edit</a></p>
     <hr>
     </p>
     {% endfor %}

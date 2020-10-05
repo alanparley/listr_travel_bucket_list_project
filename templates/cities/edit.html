@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{city.city_name}}</h2>
+<h3>in {{city.country.country_name}}</h3>
+<form action="/cities/{{city.id}}" method="POST">
+
+    <div>
+        <label for="visited">Visited?</label>
+        <select id="visited" name="visited">
+            <option value="false" {% if city.visited == False %} selected {% endif %}>NOT YET</option>
+            <option value="true" {% if city.visited == True %} selected {% endif %}>YES</option>
+        </select>
+    </div>
+
+    <button type="submit">UPDATE City</button>
+
+</form>
+
+{% endblock %}

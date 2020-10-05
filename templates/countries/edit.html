@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> Editing {{country.country_name}}</h1>
+<form action="/countries/{{country.id}}" method="POST">
+
+
+    <div>
+        <label for="visited">Visited?</label>
+        <select id="visited" name="visited">
+            <option value="false" {% if country.visited == False %} selected {% endif %}>NOT YET</option>
+            <option value="true" {% if country.visited == True %} selected {% endif %}>YES</option>
+        </select>
+    </div>
+
+
+    <button type="submit">Update Country</button>
+
+</form>
+
+{% endblock %}

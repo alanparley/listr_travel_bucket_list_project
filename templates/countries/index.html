@@ -1,28 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
-THIS SHOULD SHOW ALL COUNTRIES
+<h1>Here are all the countries you'd love to visit...</h1>
 <hr>
 
 {% for country in all_countries %}
 
 <div>
-    <p>{{country.country_name}}</p>
-    {% for city in  cities %}
-    {% if city.country.id == country.id%}
-    <p>{{ city.city_name }}</p>
-    {% endif %}
-    {% endfor %}
-    <p>Visited?
+
+    <h1>{{country.country_name}}</h1>
+    <h3>Visited?
         {% if country.visited == True %}
         &#10004;
         {% else %}
         &#10008;
         {% endif %}
+        <h2>cities to visit...</h2>
+        {% for city in  cities %}
+        {% if city.country.id == country.id%}
+        <p>{{ city.city_name }}
+            {% if city.visited == True %}
+            &#10004;
+            {% else %}
+            &#10008;
+            {% endif %}
+        </p>
+        {% endif %}
+        {% endfor %}
 
 
-    <p><a href="edit link">Edit</a></p>
+    </h3>
+    <p><a href="/countries/{{country.id}}/edit">Edit</a></p>
     <hr>
-    </p>
+
 </div>
 {% endfor %}
 
