@@ -13,23 +13,26 @@
         &#10004;
         {% else %}
         &#10008;
+        {% endif %}</h3>
+    <p><a href="/countries/{{country.id}}/edit">Edit Country</a></p>
+    <h2>cities to visit...</h2>
+    {% for city in  cities %}
+    {% if city.country.id == country.id%}
+    <p><a href="/cities/{{city.id}}/edit">{{ city.city_name }}</a>
+        {% if city.visited == True %}
+        &#10004;
+        {% else %}
+        &#10008;
         {% endif %}
-        <h2>cities to visit...</h2>
-        {% for city in  cities %}
-        {% if city.country.id == country.id%}
-        <p>{{ city.city_name }}
-            {% if city.visited == True %}
-            &#10004;
-            {% else %}
-            &#10008;
-            {% endif %}
-        </p>
-        {% endif %}
-        {% endfor %}
+    </p>
+    {% endif %}
+    {% endfor %}
 
 
-    </h3>
-    <p><a href="/countries/{{country.id}}/edit">Edit</a></p>
+
+    <p>
+        <a href="/cities/new">Add New City</a>
+    </p>
     <hr>
 
 </div>

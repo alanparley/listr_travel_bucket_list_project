@@ -3,7 +3,7 @@
 
 <form action="/cities" method="POST">
     <div>
-        <label for="country">Country:</label>
+        <label for="country">Select the country:</label>
         <select name="country_id" id="country">
             {% for country in all_countries %}
             <option value="{{ country.id }}"> {{ country.country_name }}</option>
