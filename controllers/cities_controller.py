@@ -15,7 +15,6 @@ def cities():
 def new_city():
     cities = city_repository.select_all()
     countries = country_repository.select_all()
-    print("countries", countries[0].id)
     return render_template("cities/new.html", all_cities = cities, all_countries = countries)
 
 
@@ -24,7 +23,6 @@ def create_city():
     city_name = request.form['city_name']
     visited = request.form['visited']
     country_id = request.form['country_id']
-    print("COUNTRY", country_id)
     country = country_repository.select(country_id)
     city = City(city_name, country, visited)
 
