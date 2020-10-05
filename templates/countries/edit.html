@@ -3,7 +3,6 @@
 <h1> Editing {{country.country_name}}</h1>
 <form action="/countries/{{country.id}}" method="POST">
 
-
     <div>
         <label for="visited">Visited?</label>
         <select id="visited" name="visited">
@@ -12,8 +11,14 @@
         </select>
     </div>
 
-
     <button type="submit">Update Country</button>
+</form>
+<p>
+<form action="/countries/{{country.id}}/delete" method="POST">
+    <button type="submit">DELETE Country</button>
+    </p>
+
+
 
 </form>
 
