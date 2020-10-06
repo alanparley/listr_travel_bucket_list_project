@@ -8,6 +8,7 @@
             {% for country in all_countries %}
             <option value="{{ country.id }}"> {{ country.country_name }}</option>
             {% endfor %}
+
         </select>
     </div>
     <div>
@@ -16,15 +17,13 @@
     </div>
 
 
-    <div>
+    <!-- <div>
         <label for="visited">Visited?</label>
         <select id="visited" name="visited">
             <option value="false">NOT YET</option>
             <option value="true">BEEN THERE</option>
         </select>
-    </div>
-
-
+    </div> -->
 
     <button type="submit">Add City</button>
 

@@ -7,8 +7,11 @@
     <div>
         <label for="visited">Visited?</label>
         <select id="visited" name="visited">
-            <option value="false" {% if city.visited == False %} selected {% endif %}>NOT YET</option>
-            <option value="true" {% if city.visited == True %} selected {% endif %}>YES</option>
+            <option value="false" {% if city.visited == False %} selected {% endif %}>NOT YET
+            </option>
+
+            <option value="true" {% if city.country.visited == False %} disabled
+                {% endif %}{% if city.visited == True %} selected {% endif %}>YES</option>
         </select>
     </div>
 

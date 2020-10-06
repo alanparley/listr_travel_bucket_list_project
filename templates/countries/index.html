@@ -26,12 +26,11 @@
         {% endif %}
     </p>
     {% endif %}
+
     {% endfor %}
 
-
-
     <p>
-        <a href="/cities/new">Add New City</a>
+        <a href="/cities/{{ country.id }}/newtocountry">Add New City to {{country.country_name}}</a>
     </p>
     <hr>
 
