@@ -1,40 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Here are all the countries you'd love to visit...</h1>
-<hr>
-
+<h2>Here are all the countries you'd love to visit...</h2>
 {% for country in all_countries %}
-
-<div>
-
-    <h1>{{country.country_name}}</h1>
-    <h3>Visited?
-        {% if country.visited == True %}
-        &#10004;
-        {% else %}
-        &#10008;
-        {% endif %}</h3>
-    <p><a href="/countries/{{country.id}}/edit">Edit Country</a></p>
-    <h2>cities to visit...</h2>
-    {% for city in  cities %}
-    {% if city.country.id == country.id%}
-    <p><a href="/cities/{{city.id}}/edit">{{ city.city_name }}</a>
-        {% if city.visited == True %}
-        &#10004;
-        {% else %}
-        &#10008;
+<main class="bucketlist">
+    <div class="item">
+        <span style='font-size:25px;'>&#128204;</span>
+        <h1>{{country.country_name}}</h1>
+        <h3>Visited?
+            {% if country.visited == True %}
+            <span style='font-size:25px; color: darkgreen;'>&#10004;</span>
+            {% else %}
+            <span style='font-size:25px; color: red;'>&#10008;</span>
+            {% endif %}</h3>
+        <div class="centrelink"><a href="/countries/{{country.id}}/edit"> &#9998; - Edit Country</a></div>
+        <h2>cities to visit...</h2>
+        {% for city in  cities %}
+        {% if city.country.id == country.id%}
+        <p class="centrelink"><a href="/cities/{{city.id}}/edit">&#9998; - {{ city.city_name }}</a>
+            {% if city.visited == True %}
+            <span style='font-size:25px; color: darkgreen;'>&#10004;</span>
+            {% else %}
+            <span style='font-size:25px; color: red;'>&#10008;</span>
+            {% endif %}
+        </p>
         {% endif %}
-    </p>
-    {% endif %}
+        {% endfor %}
+        <p class="centrelink">
+            <a href="/cities/{{ country.id }}/newtocountry">&#9998; - Add New City to {{country.country_name}}</a>
+        </p>
 
+
+    </div>
     {% endfor %}
-
-    <p>
-        <a href="/cities/{{ country.id }}/newtocountry">Add New City to {{country.country_name}}</a>
-    </p>
-    <hr>
-
-</div>
-{% endfor %}
-
+</main>
 {% endblock %}
