@@ -4,8 +4,8 @@
 Add a city to {{country.country_name}}
 
 <form action="/cities/new_to_country" method="POST">
-    <label for="country">Country:</label>
-    <input type="text" value="{{ country.id }}" name="country" readonly>
+    <label for="country" hidden>Country:</label>
+    <input type="text" value="{{ country.id }}" name="country" readonly hidden>
     <div>
         <label for="city_name">City:</label>
         <input type="text" id="city_name" name="city_name" placeholder="type city name" required autofocus>
