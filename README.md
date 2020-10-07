@@ -12,6 +12,7 @@ Interacting with a PostgreSQL database (CRUD)
 Object oriented programming with Python
 Web Programming (REST, MVC)
 Interacting with a PostgreSQL database (CRUD)
+Using Jinja as a web template engine for the Python programming language
 
 To run this app in VSCode, you must in run the folowing commands in terminal:
 1. createdb bucket_list 
