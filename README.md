@@ -1,5 +1,7 @@
 # travel bucket list project
 
+[![Screenshot-2020-10-07-at-20-57-41.png](https://i.postimg.cc/mgyK5TsH/Screenshot-2020-10-07-at-20-57-41.png)](https://postimg.cc/G49MBw9L)
+
 I have built a full stack web-app to track someone's travel adventures.
 The app allows a user to track countries and cities they want to visit and those they have visited.
 It allows the user to create, edit and delete countries and cities, and to associate cities with countries.
