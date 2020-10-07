@@ -10,6 +10,7 @@ header{
     justify-content: center;
 }
 
+
 .homepage{
     background-image:url("https://i.postimg.cc/RZdWY5hD/Screenshot-2020-10-06-at-21-24-32.png");
     height: 280px;
@@ -21,17 +22,19 @@ header{
 
 .menu{
     display: flex;
-    padding: 10px;
-    background-color: rgb(61, 54, 54);
+    padding: 9px;
+    background: rgb(32,32,30);
+background: linear-gradient(90deg, rgba(32,32,30,1) 0%, rgba(56,88,82,1) 86%, rgba(13,164,131,1) 100%);
     color: white;
     
   }
 
   .menu > li > a {
+    border-radius: 15px 30px 30px;
     text-decoration: none;
     background-color: #055c49;
-    padding: 3px;
-    margin: 4px
+    padding: 5px;
+    margin: 3px
   }
 
   .menu > li > a:hover {
@@ -44,11 +47,11 @@ header{
   }
   
   .menu li{
-    padding-right: 10px;
+    padding-right: 5px;
     list-style: none;
     color: white;
     float: left;
-    font-family: "Helvetica", arial, sans-serif; font-size: 14px;
+    font-family: "Archivo Narrow", arial, sans-serif; font-size: 14px;
   }
 
 h1  {
@@ -73,6 +76,7 @@ h3  {
 }
 
 .centrelink > a {
+    border-radius: 15px 30px 30px;
     background-color: #055c49;
     padding: 10px;
     color: white;

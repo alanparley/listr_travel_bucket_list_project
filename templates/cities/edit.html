@@ -15,7 +15,7 @@
                     {% endif %}{% if city.visited == True %} selected {% endif %}>YES</option>
             </select>
             &nbsp
-            <button type="submit"><b>&#9998; UPDATE {{city.city_name}} &#9998;</b></button>
+            <button type="submit"><b>&#9998; UPDATE {{city.city_name}} </b></button>
     </form>
 
     <form class="centredropdown" action="/cities/{{city.id}}/delete" method="POST">

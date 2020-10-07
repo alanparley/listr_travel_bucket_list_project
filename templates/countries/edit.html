@@ -10,7 +10,7 @@
                 <option value="true" {% if country.visited == True %} selected {% endif %}>YES</option>
             </select>
             &nbsp
-            <button type="submit"><b>&#9998; UPDATE {{country.country_name}} &#9998;</b></button>
+            <button type="submit"><b>&#9998; UPDATE {{country.country_name}} </b></button>
     </form>
     <form class="centredropdown" action="/countries/{{country.id}}/delete" method="POST">
         <button type="submit"><span style='font-size:11px; color:red'><b>&#10071;DELETE {{country.country_name}}
