@@ -7,6 +7,7 @@
 <main class="bucketlist">
     <div class="item">
         <span style='font-size:25px;'>&#128204;</span>
+
         <h1>{{country.country_name}}</h1>
         <h3>Visited?
             {% if country.visited == True %}
@@ -30,11 +31,8 @@
         <p class="centrelink">
             <a href="/cities/{{ country.id }}/newtocountry">&#9998; - Add New City to {{country.country_name}}</a>
         </p>
-
-
     </div>
     {% endfor %}
 </main>
-<br>
 
 {% endblock %}

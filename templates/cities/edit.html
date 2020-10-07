@@ -10,7 +10,6 @@
             <select id="visited" name="visited">
                 <option value="false" {% if city.visited == False %} selected {% endif %}>NOT YET
                 </option>
-
                 <option value="true" {% if city.country.visited == False %} disabled
                     {% endif %}{% if city.visited == True %} selected {% endif %}>YES</option>
             </select>
