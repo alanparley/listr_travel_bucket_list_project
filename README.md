@@ -14,8 +14,9 @@ It demonstrates:
 * Interacting with a PostgreSQL database (CRUD)
 * Using Jinja as a web template engine for Python
 
-To run this app in VSCode, you must in run the folowing commands in terminal:
+To run this app, you must in run the folowing commands in terminal:
 1. createdb bucket_list 
 2. psql -d bucket_list -f db/bucket_list.sql
 3. python3 console.py
 4. flask run
+5. http://127.0.0.1:5000/ in browser
