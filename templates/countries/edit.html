@@ -2,7 +2,8 @@
 {% block content %}
 <div class="inputform">
     <form class="newform" action="/countries/{{country.id}}" method="POST">
-        <h1> Editing {{country.country_name}}</h1>
+        <h2>Editing</h2>
+        <h1>{{country.country_name}}</h1>
         <div class="centredropdown">
             <label for="visited">Visited?</label>
             <select id="visited" name="visited">
