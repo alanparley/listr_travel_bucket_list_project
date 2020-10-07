@@ -8,11 +8,11 @@ The app allows the user to mark countries and cities as visited or still to see.
 This app has been built using Python, Flask, PostgreSQL and the psycopg, HTML and CSS.
 
 It demonstrates:
-Interacting with a PostgreSQL database (CRUD)
-Object oriented programming with Python
-Web Programming (REST, MVC)
-Interacting with a PostgreSQL database (CRUD)
-Using Jinja as a web template engine for the Python programming language
+* Interacting with a PostgreSQL database (CRUD)
+* Object oriented programming with Python
+* Web Programming (REST, MVC)
+* Interacting with a PostgreSQL database (CRUD)
+* Using Jinja as a web template engine for the Python programming language
 
 To run this app in VSCode, you must in run the folowing commands in terminal:
 1. createdb bucket_list 
