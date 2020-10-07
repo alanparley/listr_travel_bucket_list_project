@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-<h1> Editing {{country.country_name}}</h1>
-<form action="/countries/{{country.id}}" method="POST">
+<div class="inputform">
+    <form class="newform" action="/countries/{{country.id}}" method="POST">
+        <h1> Editing {{country.country_name}}</h1>
+        <div class="centredropdown">
+            <label for="visited">Visited?</label>
+            <select id="visited" name="visited">
+                <option value="false" {% if country.visited == False %} selected {% endif %}>NOT YET</option>
+                <option value="true" {% if country.visited == True %} selected {% endif %}>YES</option>
+            </select>
+            &nbsp
+            <button type="submit"><b>&#9998; UPDATE {{country.country_name}} &#9998;</b></button>
+    </form>
+    <form class="centredropdown" action="/countries/{{country.id}}/delete" method="POST">
+        <button type="submit"><span style='font-size:11px; color:red'><b>&#10071;DELETE {{country.country_name}}
+                    &#10071;</b></button></span>
+    </form>
+    </div?>
 
-    <div>
-        <label for="visited">Visited?</label>
-        <select id="visited" name="visited">
-            <option value="false" {% if country.visited == False %} selected {% endif %}>NOT YET</option>
-            <option value="true" {% if country.visited == True %} selected {% endif %}>YES</option>
-        </select>
-    </div>
 
-    <button type="submit">Update Country</button>
-</form>
-<p>
-<form action="/countries/{{country.id}}/delete" method="POST">
-    <button type="submit">DELETE Country</button>
-    </p>
 
-</form>
-
-{% endblock %}
+    {% endblock %}

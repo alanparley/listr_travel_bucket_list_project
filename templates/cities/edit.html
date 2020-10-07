@@ -1,27 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>{{city.city_name}}</h2>
-<h3>in {{city.country.country_name}}</h3>
-<form action="/cities/{{city.id}}" method="POST">
+<div class="inputform">
 
-    <div>
-        <label for="visited">Visited?</label>
-        <select id="visited" name="visited">
-            <option value="false" {% if city.visited == False %} selected {% endif %}>NOT YET
-            </option>
+    <form class="newform" action="/cities/{{city.id}}" method="POST">
+        <h1>{{city.city_name}}</h1>
+        <h2>in {{city.country.country_name}}</h2>
+        <div class="centredropdown">
+            <label for="visited">Visited? </label>
+            <select id="visited" name="visited">
+                <option value="false" {% if city.visited == False %} selected {% endif %}>NOT YET
+                </option>
 
-            <option value="true" {% if city.country.visited == False %} disabled
-                {% endif %}{% if city.visited == True %} selected {% endif %}>YES</option>
-        </select>
-    </div>
+                <option value="true" {% if city.country.visited == False %} disabled
+                    {% endif %}{% if city.visited == True %} selected {% endif %}>YES</option>
+            </select>
+            &nbsp
+            <button type="submit"><b>&#9998; UPDATE {{city.city_name}} &#9998;</b></button>
+    </form>
 
-    <button type="submit">UPDATE City</button>
+    <form class="centredropdown" action="/cities/{{city.id}}/delete" method="POST">
+        <button type="submit"><span style='font-size:11px; color:red'><b>&#10071;DELETE {{city.city_name}}
+                    &#10071;</b></button></span>
 
-</form>
-<p>
-<form action="/cities/{{city.id}}/delete" method="POST">
-    <button type="submit">DELETE City</button>
-    </p>
+    </form>
+</div>
 
-</form>
+
+</div>
 {% endblock %}

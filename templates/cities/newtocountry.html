@@ -1,19 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-
-Add a city to {{country.country_name}}
-
-<form action="/cities/new_to_country" method="POST">
-    <label for="country" hidden>Country:</label>
-    <input type="text" value="{{ country.id }}" name="country" readonly hidden>
-    <div>
-        <label for="city_name">City:</label>
-        <input type="text" id="city_name" name="city_name" placeholder="type city name" required autofocus>
-    </div>
+<div class="inputform">
 
 
-    <button type="submit">Add City</button>
+    <form class="newform" action="/cities/new_to_country" method="POST">
+        <h2>Add New City to {{country.country_name}}</h2>
 
-</form>
 
+        <label for="country" hidden>Country:</label>
+        <input type="text" value="{{ country.id }}" name="country" readonly hidden>
+        <div class="centredropdown">
+            <label for="city_name">City:</label>
+            <input type="text" id="city_name" name="city_name" placeholder="type city name" required autofocus>
+        </div>
+
+
+        <button type="submit"><b>&#9998; Add City to {{country.country_name}} &#9998;</b></button>
+
+    </form>
+</div>
 {% endblock %}

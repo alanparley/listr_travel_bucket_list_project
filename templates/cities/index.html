@@ -1,24 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Here are all the cities you'd love to visit...</h1>
+<h2><span style='font-size:25px;'>&#127983;</span> Here are all the cities you'd love to visit... <span
+        style='font-size:25px;'>&#127979;</span></h2>
 <main class="bucketlist">
 
     {% for city in all_cities %}
 
     <div class="item">
-        <span style='font-size:25px;'>&#128204;</span>
-        <h2>{{city.city_name}}</h2>
+        <span style='font-size:25px;'>&#128205;</span>
+        <h1>{{city.city_name}}</h1>
         <h3>in {{city.country.country_name}}</h3>
-        <div class="centrevisited">Visited?
+        <div class="centrevisited"> <span style='font-size:20px'>Visited?</span>
             {% if city.visited == True %}
-            <span style='font-size:25px; color: darkgreen;'>&#10004;</span>
+            <span style=' font-size:25px; color: darkgreen;'>&#10004;</span>
             {% else %}
             <span style='font-size:25px; color: red;'>&#10008;</span>
             {% endif %}
         </div>
 
         <div class="centrelink">
-            <a href="/cities/{{city.id}}/edit">Edit</a>
+            <a href="/cities/{{city.id}}/edit">&#9998; Edit {{ city.city_name }}</a>
         </div>
 
     </div>
