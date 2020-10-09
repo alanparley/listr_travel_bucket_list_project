@@ -13,7 +13,6 @@ It demonstrates:
 * Interacting with a PostgreSQL database (CRUD)
 * Object oriented programming with Python
 * Web Programming (REST, MVC)
-* Interacting with a PostgreSQL database (CRUD)
 * Using Jinja as a web template engine for Python
 
 To run this app, you must in run the folowing commands in terminal:
